@@ -1,5 +1,5 @@
 server "lanrenol.com", :app, :web, :db, :primary => true
-set :deploy_to, "/var/www/test_demo_set"
+set :deploy_to, "/var/www/test_demo_staging"
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.

@@ -3,7 +3,8 @@ TestDemo::Application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
-
+  set :password, ask('Server password:', nil)
+  server 'lanrenol.com', user: 'zhouzhen', port: 22, password: fetch(:password), roles: %w{web app db}
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both thread web servers
   # and those relying on copy on write to perform better.
